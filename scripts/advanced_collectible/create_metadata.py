@@ -6,7 +6,7 @@ from metadata.sample_metadata import metadata_template
 from pathlib import Path
 
 
-def main():
+def create_metadata():
     advancedCollectible = AdvancedCollectible[-1]
     number_of_collectibles = advancedCollectible.tokenCounter()
     print(f"You have created {number_of_collectibles} collectibles!")
@@ -42,3 +42,7 @@ def upload_to_ipfs(_filePath):
         image_url = f"https://ipfs.io/ipfs/{ipfs_hash}?filename={filename}"
         print(image_url)
         return image_url
+
+
+def main():
+    create_metadata()

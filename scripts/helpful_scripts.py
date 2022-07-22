@@ -15,6 +15,12 @@ OPEN_SEA_URL = "https://testnets.opensea.io/assets/{}/{}"
 BREED_MAPPING = {0: "PUG", 1: "SHIBA_INU", 2: "ST_BERNARD"}
 PINATA_GATEWAY_URL = "https://gateway.pinata.cloud/ipfs/"
 
+MAPPING_BREED_TO_IMAGE = {
+    "PUG": "https://ipfs.io/ipfs/QmUcno8d6hmws8U7ECtCF3753jh71tL17yaHJyfSVFEaD9?filename=1-PUG.json",
+    "SHIBA_INU": "https://ipfs.io/ipfs/QmbJpLAZQ4Cn2b8KCaf7Gg29ZzwEuoRCR6Lmd4hR4TMX6k?filename=0-SHIBA_INU.json",
+    "ST_BERNARD": "",
+}
+
 
 def get_breed(breed_number):
     return BREED_MAPPING[breed_number]
