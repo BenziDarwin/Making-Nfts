@@ -32,5 +32,5 @@ def upload_to_pinata(_filePath, _filename):
             PINATA_BASE_URL + endpoint,
             headers=headers,
             files={"file": (_filename, image_binary)},
-        )
+        timeout=60)
         print(response.json())
