@@ -36,7 +36,7 @@ def upload_to_ipfs(_filePath):
         image_binary = fp.read()
         # Upload to IPFS
         ipfs_url = "http://127.0.0.1:5001/api/v0/add"
-        response = requests.post(ipfs_url, files={"file": image_binary})
+        response = requests.post(ipfs_url, files={"file": image_binary}, timeout=60)
         ipfs_hash = response.json()["Hash"]
         filename = _filePath.split("/")[-1:][0]
         image_url = f"https://ipfs.io/ipfs/{ipfs_hash}?filename={filename}"
